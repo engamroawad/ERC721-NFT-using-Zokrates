@@ -12,11 +12,27 @@ contract('TestSquareVerifier', accounts => {
         })
 
         it('should verifiy proof ', async function () {
-            proof = JSON.parse(fs.readFileSync("/home/amr/BlockChain/Blockchain-Capstone/zokrates/code/square/proof.json"))
+            proof = JSON.parse(fs.readFileSync("../zokrates/code/square/proof.json"))
 
             // Test verification with incorrect proof
             result=await this.contract.verifyTx(proof.proof ,proof.inputs);
             assert.equal(result, true, "incorrect proof");
+        });
+
+        it('another correct verifiy proof ', async function () {
+            proof = JSON.parse(fs.readFileSync("../zokrates/code/square/proof_1.json"))
+
+            // Test verification with incorrect proof
+            result=await this.contract.verifyTx(proof.proof ,proof.inputs);
+            assert.equal(result, true, "incorrect proof");
+        });
+
+        it('should verifiy incorrect proofs ', async function () {
+            proof = JSON.parse(fs.readFileSync("../zokrates/code/square/proof_incorrect.json"))
+
+            // Test verification with incorrect proof
+            result=await this.contract.verifyTx(proof.proof ,proof.inputs);
+            assert.equal(result, false, "incorrect proof not detected");
         });
     })
 
