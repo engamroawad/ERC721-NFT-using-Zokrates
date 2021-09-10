@@ -1,7 +1,7 @@
 SolnVerifier =require('../eth-contracts/build/contracts/SolnSquareVerifier.json');
 const HDWalletProvider = require('truffle-hdwallet-provider');
 
-const Userinkeby= true
+const Userinkeby= false
 
 Web3 =require('web3');
 config=require('./config.json')
@@ -21,12 +21,12 @@ account_one = ''
 web3.eth.getAccounts(async (error, accts) => {
 
     account_one = accts[0];
-    path = '/home/amr/BlockChain/Blockchain-Capstone/zokrates/code/square/proof_'
-    for (i = 0; i < 1; i++) {
+    path = '../zokrates/code/square/proof_'
+    for (i = 0; i < 10; i++) {
        await verifier.methods.addSolution().send({ from: account_one });
        console.log("add solution no:"+i);
     }
-    for (i = 0; i < 1; i++) {
+    for (i = 0; i < 10; i++) {
         proof = JSON.parse(fs.readFileSync(path + (i +1).toLocaleString('en-US', {minimumIntegerDigits: 1, useGrouping:false})+ ".json"));
         await verifier.methods.mintNewNFT(i, proof.proof, proof.inputs, account_one, i+1).send({ from: account_one,gas:10000000 });
         console.log("Minted Token ID:"+i+1);

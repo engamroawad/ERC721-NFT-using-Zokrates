@@ -15,16 +15,25 @@ The capstone will build upon the knowledge you have gained in the course in orde
 
 # Project Deployment
 
+* Run the Test:
+                truffle test
+
+
 * versions: Truffle v5.4.9 (core: 5.4.9)
             Solidity v0.5.16 (solc-js)
             Node v14.17.5
             Web3.js v1.5.2
 
 
-* Rinkebey deployed Contract address: 0xD659a44625d539a90ABb0469BA66ECf0e1874cbD
+* Rinkebey deployed Contract address:(SquareVerifier.sol):     0xA7162E16B9673d51c6346074bc0c0BBA4F1Ef12f
+                                     (SolnSqaureVerifier.sol): 0xD659a44625d539a90ABb0469BA66ECf0e1874cbD
+
 * Mint 10 tokens  see Ethescan for history to mint 10 tokens: https://rinkeby.etherscan.io/address/0xD659a44625d539a90ABb0469BA66ECf0e1874cbD
                                    
-* open Sea Market Palce URL https://testnets.opensea.io/assets/0xD659a44625d539a90ABb0469BA66ECf0e1874cbD/1
+* open Sea Market Palce URL https://testnets.opensea.io/collection/capstone-qdkevltsmy
+
+* open sea token links:
+                            https://testnets.opensea.io/assets/0xD659a44625d539a90ABb0469BA66ECf0e1874cbD/1
                             https://testnets.opensea.io/assets/0xD659a44625d539a90ABb0469BA66ECf0e1874cbD/2
                             https://testnets.opensea.io/assets/0xD659a44625d539a90ABb0469BA66ECf0e1874cbD/3
                             https://testnets.opensea.io/assets/0xD659a44625d539a90ABb0469BA66ECf0e1874cbD/4

@@ -23,7 +23,7 @@ contract('TestSquareVerifierSlon', accounts => {
                 return ev.index == 0 ;
             });
 
-            proof = JSON.parse(fs.readFileSync("/home/amr/BlockChain/Blockchain-Capstone/zokrates/code/square/proof_1.json"));
+            proof = JSON.parse(fs.readFileSync("../zokrates/code/square/proof_1.json"));
              await this.contract.mintNewNFT(0,proof.proof ,proof.inputs,account_two,1,{from: account_one });
 
              totalSupply=await this.contract.totalSupply();
@@ -36,7 +36,7 @@ contract('TestSquareVerifierSlon', accounts => {
                  return ev.index == 1 ;
              });
  
-             proof = JSON.parse(fs.readFileSync("/home/amr/BlockChain/Blockchain-Capstone/zokrates/code/square/proof_2.json"));
+             proof = JSON.parse(fs.readFileSync("../zokrates/code/square/proof_2.json"));
               await this.contract.mintNewNFT(1,proof.proof ,proof.inputs,account_two,2,{from: account_one });
  
               totalSupply=await this.contract.totalSupply();
